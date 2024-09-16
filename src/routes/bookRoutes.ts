@@ -1,6 +1,7 @@
 import express, { Request, Response } from "express";
 import {
   getBooks,
+  getBooks2,
   getBook,
   createBook,
   updateBook,
@@ -11,6 +12,9 @@ const router = express.Router();
 
 // GET /books
 router.get("/books", getBooks);
+
+// GET /books2
+router.get("/books2", getBooks2);
 
 // GET /books/:id
 router.get("/books/:id", getBook);

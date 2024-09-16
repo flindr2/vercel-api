@@ -1,26 +1,6 @@
-import express from "express";
-import cors from "cors";
-import "dotenv/config";
-import connect from "./connect";
-import bookRoutes from "./routes/bookRoutes";
+import app from './app';
 
-const app = express();
-app.use(express.json());
-app.use(cors());
-const port = 3000;
-
-connect();
-
-app.get("/", (req, res) => {
-  res.json({
-    message: "🦄🌈✨👋🌎🌍🌏✨🌈🦄",
-  });
-});
-
-app.use("/api/", bookRoutes);
-
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+  console.log(`Listening: http://localhost:${port}`);
 });
-
-export default app;

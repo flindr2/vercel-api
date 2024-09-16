@@ -2,9 +2,10 @@
   "name": "8-deploy-vercel",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/app.ts",
   "scripts": {
-    "start": "npx tsx watch ./src/index.ts",
+    "dev": "npx tsx watch ./src/index.ts",
+    "start:dist": "node dist/src/index.js",
     "build": "tsc",
     "vercel-build": "echo 'vercel-build'"
   },

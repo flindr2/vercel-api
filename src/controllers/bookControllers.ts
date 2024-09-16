@@ -12,6 +12,16 @@ export const getBooks = async (req: Request, res: Response) => {
   }
 };
 
+export const getBooks2 = async (req: Request, res: Response) => {
+  try {
+    res.status(200).json({ message: "Hello from getBooks2" });
+  } catch (error) {
+    if (error instanceof Error) {
+      res.status(500).json(error.message);
+    }
+  }
+};
+
 export const getBook = async (req: Request, res: Response) => {
   try {
     const bookId = req.params.id;
